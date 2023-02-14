@@ -1,0 +1,122 @@
+body{
+    background-color: hsl(323 21% 16%);
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Comfortaa', cursive;
+}
+
+h1{
+    color: hsl(317 100% 54%);
+    font-size: 4rem;
+    text-align: center;
+    margin: 0;
+    padding-top: 1em;
+    text-shadow: 0 0 0.050em hsl(0 0% 100% / 0.5), 0 0 0.45em currentColor;
+}
+
+h2, .results{
+    color: hsl(317 100% 54%);
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-shadow: 0 0 0.050em hsl(0 0% 100% / 0.5), 0 0 0.45em currentColor;
+
+}
+
+.score{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    color: hsl(317 100% 54%);
+    text-shadow: 0 0 0.050em hsl(0 0% 100% / 0.5), 0 0 0.45em currentColor;
+}
+
+.rps-area{
+    display: flex;
+    justify-content: center;
+    padding: 3em;
+    gap: 3em;
+
+}
+
+button{
+    font-size: 3rem;
+    display: flex;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;
+    color:hsl(317 100% 54%);
+    border: hsl(317 100% 54%) 0.125em solid;
+    padding: 0.25em 1em;
+    border-radius: 0.25em;
+    background-color: hsl(323 21% 16%);
+    text-shadow: 0 0 0.050em hsl(0 0% 100% / 0.5), 0 0 0.45em currentColor;
+    box-shadow: inset 0 0 0.5em 0 hsl(317 100% 54%), 
+    0 0 0.5em 0 hsl(317 100% 54%);
+    position: relative;
+}
+
+button::before {
+    pointer-events: none;
+    content:"";
+    position: absolute;
+    background: hsl(317 100% 54%);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(1em) rotateX(20deg)
+    scale(1, 0.35);
+    filter: blur(1em);
+    opacity: 0.7;
+}
+
+button:focus,
+button:hover{
+    background: hsl(317 100% 54%);
+    color: hsl(323 21% 16%);
+    text-shadow: none;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em hsl(317 100% 54%);
+    opacity: 0;
+    background-color: hsl(317 100% 54%);
+    z-index: -1;
+    transition: opacity 100ms linear;
+
+}
+
+button:focus::after, 
+button:hover::after {
+    opacity: 1;
+}
+
+button:focus::before,
+button:hover::before{
+    opacity: 1;
+}
+
+.replayBtn{
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.replayBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

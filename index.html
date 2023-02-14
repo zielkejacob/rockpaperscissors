@@ -5,10 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors!</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./js/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-
-    <script src="./js/script.js"></script>
+    <h1>Rock, Paper, Scissors!</h1>
+    <h2>Best of 5 wins!</h2>
+    <div class="score">
+        <div class="pScoreboard">Your Score: 0</div>
+        <div class="cScoreboard">Computer Score: 0</div>
+    </div>
+    <div class="rps-area">
+        <button class="rock rps" type="button">Rock</button>
+        <button class="paper rps" type="button">Paper</button>
+        <button class="scissors rps" type="button">Scissors</button>
+    </div>
+    <div class="results"></div>
+    <div class="replayBox">
+        <button class="replayBtn" type="button">Play Again</button>
+    </div>
 </body>
 </html>
